@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Web-based</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar container">
+            <a href="home.html" class="logo"><span>Visal</span>Shop</a>
+            <nav class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-section container">
+        <div class="contact-wrapper">
+            <div class="contact-info-panel">
+                <h2>Get In Touch</h2>
+                <p>Have questions about shipping, sizing, or customizable bundles? Send us a message.</p>
+                <div class="info-item"><i class="fa-solid fa-envelope"></i> support@visalshop.com</div>
+                <div class="info-item"><i class="fa-solid fa-location-dot"></i> Phnom Penh, Cambodia</div>
+            </div>
+            
+            <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="So Panha">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="panha@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" required placeholder="Write your text here..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header"><h3>Your Shopping Cart</h3><i class="fa-solid fa-xmark" id="close-cart"></i></div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Subtotal:</span><span id="cart-total-price">$0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

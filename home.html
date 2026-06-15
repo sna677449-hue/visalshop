@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Web-based</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar container">
+            <a href="home.html" class="logo"><span>Visal</span>Shop</a>
+            <nav class="nav-links">
+                <a href="home.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="cart-icon" id="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero animate-fade">
+        <div class="hero-content container">
+            <span class="tagline">New Arrivals Soon!</span>
+            <h1>The Art of Minimal Living</h1>
+            <p>Elevate your everyday environment with our premium lifestyle essentials.</p>
+            <a href="shop.html" class="btn-primary">Explore Shop <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section class="categories container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='shop.html?cat=nike sneakers'">
+                <img src="photo/nike-5.jpg" alt="nike sneakers">
+                <div class="category-overlay"><h3>NIKE SNEAKERS</h3></div>
+            </div>
+            <div class="category-card" onclick="window.location.href='shop.html?cat=nike cleats'">
+                <img src="photo/nike-3.jpg" alt="nike cleats">
+                <div class="category-overlay"><h3>NIKE CLEATS</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <i class="fa-solid fa-xmark" id="close-cart"></i>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Subtotal:</span><span id="cart-total-price">$0.00</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <footer>
+        <h1 style="float: left;">Facebook   <br><a href="https://www.facebook.com/share/18unjLENLY/?mibextid=wwXIfr">Vi Sal</a></h1>
+        <br><p>&copy; Assignment for Web-based! create by Visal.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
