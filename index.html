@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Keyboard Typing Tester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Professional Typing Speed Tester</h2>
+        
+        <div class="stats-container">
+            <div class="stat-box">WPM: <span id="wpm">0</span></div>
+            <div class="stat-box">Accuracy: <span id="accuracy">100</span>%</div>
+            <div class="stat-box">Time: <span id="timer">120</span>s</div>
+        </div>
+
+        <div class="text-display" id="textDisplay"></div>
+        
+        <div class="keyboard-wrapper">
+            <div class="keyboard-main" id="keyboardMain"></div>
+            <div class="keyboard-numpad" id="keyboardNumpad"></div>
+        </div>
+        
+        <input type="text" id="textInput" autocomplete="off" autofocus>
+        <button id="restartBtn">Restart Test</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
